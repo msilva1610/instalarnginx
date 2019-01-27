@@ -1,0 +1,2 @@
+# instalarnginx
+Como instalar nginx
