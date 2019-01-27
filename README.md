@@ -1,13 +1,13 @@
 # Passos para instalar nginx
 ## Centos7
 
-Atualizar o repositório de pacotes do centos
+#### Atualizar o repositório de pacotes do centos
 
 ```
 yum -y update
 ```
 
-Instalar o EPEL repository
+#### Instalar o EPEL repository
 ```
 yum install epel-release -y
 ```
@@ -18,6 +18,24 @@ yum install epel-release -y
 yum install nginx -y
 ```
 
+
+#### Iniciando o nginx
+```
+systemctl start nginx
+systemctl enable nginx
+systemctl status nginx
+```
+
+#### Liberando o firewall
+
+```
+systemctl enable firewalld
+systemctl start firewalld
+systemctl status firewalld
+firewall-cmd --zone=public --permanent --add-service=http
+firewall-cmd --zone=public --permanent --add-service=https
+firewall-cmd --reload
+```
 
 #### Instalar os pacotes de apoio
 ```
