@@ -50,9 +50,23 @@ Permitir usuário local de gravar no arquivo
 chmod 744 arquivo
 ```
 
-Exemplo de login na OCI com ssh
+#### Exemplo de login na OCI com ssh
 
 ```
 ssh -i id_rsa opc@ip
 ```
+#### Iniciar e habilitar o ntp service via systemctl
 
+```
+systemctl start ntpd 
+systemctl enable ntpd 
+```
+
+#### Desabilitar o chronyd 
+
+O objetivo é garantir que o ntpd service inicie automaticamente após um reboot do servidor
+
+```
+systemctl stop chronyd
+systemctl disable chronyd 
+```
