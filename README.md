@@ -70,3 +70,10 @@ O objetivo é garantir que o ntpd service inicie automaticamente após um reboot
 systemctl stop chronyd
 systemctl disable chronyd 
 ```
+#### Verificar o status do serviço ntpq
+```
+[root@myfristinstance ~]# ntpq -p
+     remote           refid      st t when poll reach   delay   offset  jitter
+==============================================================================
+*169.254.169.254 192.168.11.4     2 u   22   64   37    0.323   -0.279   6.775
+```
