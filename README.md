@@ -40,3 +40,18 @@ firewall-cmd --reload
 #### Instalar os pacotes de apoio
 ```
 yum install git wget curl vim nano -y
+
+## Outros comandos de apoio
+
+Permitir usuário local de gravar no arquivo
+
+```
+chmod 744 arquivo
+```
+
+Exemplo de login na OCI com ssh
+
+```
+ssh -i id_rsa opc@ip
+```
+
