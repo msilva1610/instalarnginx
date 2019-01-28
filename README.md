@@ -40,6 +40,7 @@ firewall-cmd --reload
 #### Instalar os pacotes de apoio
 ```
 yum install git wget curl vim nano -y
+```
 
 ## Outros comandos de apoio
 
